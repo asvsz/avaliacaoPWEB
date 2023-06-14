@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>Adicione uma Tarefa</h1>
+
+<div>
+    <form action="/adicionar" method="POST">
+        <label for="nome">Tarefa: </label>
+        <input type="text" name="nome" requerid/>
+
+        <input type="submit" value="Adicione">
+    </form>
+</div>
+{% endblock %}

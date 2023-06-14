@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>Lista de Tarefas</h1>
+
+<div>
+    {% for tarefa in tarefas %}
+    <li>
+        {{ tarefa.nome }}
+        
+    </li> <a href="/editar/{{ loop.index0 }}"> Editar</a>
+    
+    
+    
+    {% endfor %}
+</div>
+{% endblock %}

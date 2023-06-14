@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>Lista de Tarefas</h1>
+
+<div>
+    {% for tarefa in tarefas %}
+    <li>
+      {{ tarefa.nome }}
+    </li>
+    <form action="/excluir/{{ tarefa.id }}" method="POST">
+        <!-- Incluir o campo oculto com o valor DELETE -->
+        <input type="hidden" name="method" value="DELETE">
+        <input type="submit" value="Excluir"/>
+    </form>    
+    {% endfor %}
+</div>
+{% endblock %}
