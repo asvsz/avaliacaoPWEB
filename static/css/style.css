@@ -1,0 +1,75 @@
+/* Menu */
+.navbar {
+  background: #9092A2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  height: 56px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav a {
+  padding-right: 1rem;
+  color: #070705;
+  text-decoration: none;
+}
+
+/* Todo Body*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f7f8fc;
+}
+
+
+/* Conteúdo */
+
+.text{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.p-inicial {
+  padding-top: 120px;
+  font-size: 1.5rem;
+}
+
+.h1-inicial {
+  font-size: 3.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+li{
+  padding-top: 2px;
+  font-size: 1.5rem;
+}
+
+/* Formulário e Botões */
+form{
+  font-size: 1.5rem;
+  padding-top: 8px;
+}
+
+form input{
+  font-size: 1rem;
+}
+
+button a{
+  text-decoration: none;
+  color: #070705;
+  font-size: 1rem;
+}

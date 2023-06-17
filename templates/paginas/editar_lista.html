@@ -4,15 +4,16 @@
 
 <div>
     {% if tarefas %}
-
     {% for tarefa in tarefas %}
 
-    <li>{{ tarefa.nome }}</li>
-    <button>
-        <a href="/editar/{{ loop.index0 }}"> Editar</a>
-    </button>
-    {% endfor %}
+    <li>
+        {{ tarefa.nome }}
+        <button>
+            <a href="/editar/{{ loop.index0 }}">Editar</a>
+        </button>
+    </li>
 
+    {% endfor %}
     {% else %}
 
     <h3>Não há tarefas</h3>

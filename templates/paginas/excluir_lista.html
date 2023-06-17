@@ -5,14 +5,15 @@
 <div>
   {% if tarefas %}
   {% for tarefa in tarefas %}
+
   <li>
     {{ tarefa.nome }}
+    <button>
+      <a href="/excluir/{{ loop.index0 }}">Excluir</a>
+    </button>
   </li>
-  <button>
-    <a href="/excluir/{{ loop.index0 }}">Excluir</a>
-  </button>
-  {% endfor %}
 
+  {% endfor %}
   {% else %}
 
   <h3>Não há tarefas</h3>
