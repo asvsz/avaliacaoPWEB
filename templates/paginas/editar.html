@@ -4,14 +4,10 @@
 
 <div>
     <form action="/editar/{{ tarefa['id'] }}" method="POST">
-        <!-- Incluir o campo oculto com o valor PUT -->
-        <input type="hidden" name="method" value="PUT">
-        
-        <!-- Resto dos campos do formulário -->
         <label for="nome">Tarefa: </label>
         <input type="text" name="nome" id="nome" value="{{ tarefa['nome'] }}" required/>
 
-        <input type="submit" value="Edite">
+        <input type="submit" value="Salvar">
     </form>
 </div>
 {% endblock %}

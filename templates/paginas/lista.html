@@ -3,12 +3,18 @@
 <h1>Lista de Tarefas</h1>
 
 <table>
+    {% if tarefas %}
+
     {% for tarefa in tarefas %}
+
     <li>{{ tarefa.nome }}</li>
-
-         <a href="/editar/{{ loop.index0 }}">Editar</a>
-        <a href="/excluir/{{ loop.index0 }}">Excluir</a>
-
+    
     {% endfor %}
+
+    {% else %}
+
+    <h3>Não há tarefas</h3>
+
+    {% endif %}
 </table>
 {% endblock %}

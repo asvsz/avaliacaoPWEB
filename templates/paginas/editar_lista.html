@@ -1,16 +1,22 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-<h1>Lista de Tarefas</h1>
+<h1>Edite uma Tarefa</h1>
 
 <div>
+    {% if tarefas %}
+
     {% for tarefa in tarefas %}
-    <li>
-        {{ tarefa.nome }}
-        
-    </li> <a href="/editar/{{ loop.index0 }}"> Editar</a>
-    
-    
-    
+
+    <li>{{ tarefa.nome }}</li>
+    <button>
+        <a href="/editar/{{ loop.index0 }}"> Editar</a>
+    </button>
     {% endfor %}
+
+    {% else %}
+
+    <h3>Não há tarefas</h3>
+
+    {% endif %}
 </div>
 {% endblock %}
