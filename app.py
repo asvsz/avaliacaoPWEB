@@ -36,12 +36,10 @@ def editarLista():
 def editarTarefa(id):
     tarefa = next((tarefa for tarefa in tarefas if tarefa['id'] == id), None)
 
-    if tarefa:
-        if request.method in ['POST']:
-            tarefa['nome'] = request.form['nome']
-            return redirect('/editar')
-        return render_template('paginas/editar.html', tarefa=tarefa)
-    return 'Tarefa não encontrada'
+    if request.method in ['POST']:
+        tarefa['nome'] = request.form['nome']
+        return redirect('/editar')
+    return render_template('paginas/editar.html', tarefa=tarefa)
 
 # Rota para escolher qual Tarefa Excluir
 @app.route('/excluir')
